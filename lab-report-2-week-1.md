@@ -2,20 +2,26 @@
 
 This week we learned how to download VSCODE, accessing a remote server, running basic commands, moving files, setting a key, and optimizing remote running. 
 
+ I initially used my email account, and then redid all of it using my cs15lfa22md@ieng6@ucsd.edu once I figured out how to get access. Although I redid everything completely, I only included relevant screenshots from the redo that added value to the tutorial. 
+
 ## Downloading VS Code
 
-To Download VS Code, you simply need to search it up on the internet. The first link is the VS Code website, and the download button is in the upper right corner. When you download VS Code and open it up, it should look like this:
+To Download VS Code, you simply need to search it up on the internet. The first link is the VS Code website, and the download button is in the upper right corner. 
+
+If you're too lazy to do that, here's the link: 
+
+[Link to VSCODE](https://code.visualstudio.com/)
+
+When you download VS Code and open it up, it should look like this:
 ![vscode-screenshot](week-1-photos/vscode-screenshot.png)
 
 ## Accessing a remote Server
 
 To connect to a remote server, type ssh and the name of the server like below:
 
-`$ ssh cs15l@ieng6@ucsd.edu`
+`$ ssh cs15lfa22md@ieng6.ucsd.edu`
 
 It's going to ask for a password, which you should know. In my case, it did not prompt me to write yes or no. I couldn't log into that server so I used my email address instead. 
-
-*Self note: The KEY for my remote server has not been setup because I only did it for my email account*
 
 This is what it should look like: 
 
@@ -24,6 +30,12 @@ This is what it should look like:
 Now you are on the remote server. To exit, type: 
 
 `$ exit`
+
+When I figured out how to get access to the other account, here's what the ssh looked like. By the time I screenshotted it, I had already set up the public key, so it didn't ask me for a password. 
+
+Here's what that looked like: 
+
+![ssh-redo-screenshot](week-1-photos/ssh-redo-screenshot.png)
 
 ## Running Commands
 
@@ -59,7 +71,8 @@ To move it into the remote server, you have to type this code:
 
 It will prompt you to type in the same password you used to access the server, and after that, it's done. 
 
-Once its in the server, you can access the file by using SSH and then if you use the ls command you should see the file. You can run it by using: 
+Once its in the server, you can access the file by using SSH and then if you use the ls command you should see the file. You can compile and run it by using: 
+
 ```
 javac WhereAmI.java
 java WhereAmI
@@ -67,6 +80,13 @@ java WhereAmI
 This is what it should look like: 
 
 ![scp-screenshot](week-1-photos/scp-screenshot.png)
+
+
+After redoing what I just mentioned above but with the cs15lfa22md@ieng6.ucsd.edu account, I compiled and ran WhereAmI.java on both the local and remote server so you can see the difference:
+
+![redo-wai-screenshot](week-1-photos/redo-wai-screenshot.png)
+
+If you pay attention to what WhereAmI prints out, you can see that I'm in a different directory, which shows that the file has been moved. 
 
 ## Setting up an SSH Key
 
@@ -87,6 +107,9 @@ $ rm -r .ssh
 $ mkdir .ssh
 $ exit
 ```
+
+Although this is what I did, you shouldn't do this becasue the .ssh file may contain things you don't know about. Next time, just reuse the server. When I redid this and set up the SSH key in my cs15lfa22md@ieng6.ucsd.edu account, I didn't run into this problem because I did it all at once. In the "Accessing a Remote Server Section", I left a screenshot of me SSHing into the account without it asking for a password, which shows that the key is set up.
+
 From there, you use scp to move the passkey from your computer into that remote directory with this command: 
 
 `/Users/fred/.ssh/id_rsa.pub frohn@ieng6.ucsd.edu:~/.ssh/authorized_

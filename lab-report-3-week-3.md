@@ -74,6 +74,7 @@ Server Started! Visit http://localhost:4000 to visit.
 ```
 
 This is what it initially looked like: 
+
 ![initial-state-screenshot](week-3-photos/initial-state-screenshot.png)
 
 I added three items to the array by typing different URLs. Here is that that all looked like: 

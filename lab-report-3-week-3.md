@@ -147,7 +147,7 @@ static void reverseInPlaceFixed(int[] arr) {
   }
 ```
 
-###Debugging the filter() method
+### Debugging the filter() method
 
 This is the code for the filter() method: 
 

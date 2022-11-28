@@ -10,3 +10,5 @@
 [Lab Report Week 5](lab-report-week-5.md)
 
 [Lab Report Week 7](lab-report-week-7.md)
+
+[Lab Report Week 9](lab-report-5.md)
